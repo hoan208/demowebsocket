@@ -11,18 +11,7 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 <script type="text/javascript">
-    // obj thông tin chứng thư số
-    var CerInfo = {
-        STT: null,
-        TTChuc: null,
-        Seri: null,
-        TNgay: null,
-        DNgay: null,
-        HThuc: null
-    }
-
-    // danh sách thông tin chứng thư số
-    var ListCerInfo = [];
+   
     var DangKySuDung = function () {
         this.init = function () {
             registerEvents();
@@ -38,24 +27,7 @@
                     dataType: 'json',
                     success: function (res) {
 
-                        // Danh sách chứng thư số sử dụng
-                        $('#tblDsChungThuSo .tr-value').remove();
-                        let html = '';
-                        let hinhThucDkHTML = `<select class='hinh-thuc-dk'><option value='1'>Thêm mới</option><option value='2'>Gia hạn</option><option value='3'>Ngưng sử dụng</option></select>`;
 
-                        //if (res != null && Array.isArray(res)) {
-                        //    res.forEach((value) => {
-                        //        html += `<tr class='tr-value'>
-                        //                        <td class='STT' style="border-top: 1px solid #000000;  border-right: 1px solid #000000;" align="center" valign=middle bgcolor="#FFFFFF" sdnum="1033;0;">${value['STT']}</td>
-                        //                        <td class='TTChuc' style="border-top: 1px solid #000000;  border-right: 1px solid #000000;" align="center" valign=middle bgcolor="#FFFFFF" sdnum="1033;0;">${value['TTChuc']}</td>
-                        //                        <td class='Seri' style="border-top: 1px solid #000000;  border-right: 1px solid #000000;" align="center" valign=middle bgcolor="#FFFFFF" sdnum="1033;0;">${value['Seri']}</td>
-                        //                        <td class='TNgay' style="border-top: 1px solid #000000;  border-right: 1px solid #000000;" align="center" valign=middle bgcolor="#FFFFFF" sdnum="1033;0;">${value['TNgay']}</td>
-                        //                        <td class='DNgay' style="border-top: 1px solid #000000;  border-right: 1px solid #000000;" align="center" valign=middle bgcolor="#FFFFFF" sdnum="1033;0;">${value['DNgay']}</td>
-                        //                        <td class='HThuc' style="border-top: 1px solid #000000;" align="center" valign=middle bgcolor="#FFFFFF" sdnum="1033;0;">${hinhThucDkHTML}</td>
-                        //                     </tr>`;
-                        //    });
-                        //    $('#tblDsChungThuSo').append(html);
-                        //}
                     },
                     error: function (err) {
                         console.log(err);
