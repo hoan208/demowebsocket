@@ -12,7 +12,7 @@
 
 <script type="text/javascript">
    
-    var DangKySuDung = function () {
+    var WebsocketCir = function () {
         this.init = function () {
             registerEvents();
         }
@@ -23,11 +23,10 @@
 
                 $.ajax({
                     type: 'POST',
-                    url: '/Home/GetCerInfor',
+                    url: '/Home/GetCer',
                     dataType: 'json',
                     success: function (res) {
-
-
+                        //
                     },
                     error: function (err) {
                         console.log(err);
@@ -36,6 +35,6 @@
             });
         }
     }
-    var dksd = new DangKySuDung();
-    dksd.init();
+    var WsC = new WebsocketCir();
+    WsC.init();
 </script>
