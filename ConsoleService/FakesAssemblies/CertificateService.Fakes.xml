@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CertificateService.Fakes</name>
+    </assembly>
+    <members>
+        <member name="T:CertificateService.Fakes.ShimCertificateLib">
+            <summary>Shim type of CertificateService.CertificateLib</summary>
+        </member>
+        <member name="M:CertificateService.Fakes.ShimCertificateLib.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:CertificateService.Fakes.ShimCertificateLib.#ctor(CertificateService.CertificateLib)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="T:CertificateService.Fakes.ShimCertificateLib.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:CertificateService.Fakes.ShimCertificateLib.AllInstances.GetCertificate">
+            <summary>Sets the shim of CertificateLib.GetCertificate()</summary>
+        </member>
+        <member name="P:CertificateService.Fakes.ShimCertificateLib.AllInstances.GetDataString">
+            <summary>Sets the shim of CertificateLib.GetData(String value)</summary>
+        </member>
+        <member name="M:CertificateService.Fakes.ShimCertificateLib.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:CertificateService.Fakes.ShimCertificateLib.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:CertificateService.Fakes.ShimCertificateLib.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:CertificateService.Fakes.ShimCertificateLib.Bind(CertificateService.ICertificateLib)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="P:CertificateService.Fakes.ShimCertificateLib.Constructor">
+            <summary>Sets the shim of CertificateLib.CertificateLib()</summary>
+        </member>
+        <member name="P:CertificateService.Fakes.ShimCertificateLib.GetCertificate">
+            <summary>Sets the shim of CertificateLib.GetCertificate()</summary>
+        </member>
+        <member name="P:CertificateService.Fakes.ShimCertificateLib.GetDataString">
+            <summary>Sets the shim of CertificateLib.GetData(String value)</summary>
+        </member>
+        <member name="T:CertificateService.Fakes.StubCertificateLib">
+            <summary>Stub type of CertificateService.CertificateLib</summary>
+        </member>
+        <member name="M:CertificateService.Fakes.StubCertificateLib.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="P:CertificateService.Fakes.StubCertificateLib.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="M:CertificateService.Fakes.StubCertificateLib.InitializeStub">
+            <summary>Initializes a new instance of type StubCertificateLib</summary>
+        </member>
+        <member name="P:CertificateService.Fakes.StubCertificateLib.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:CertificateService.Fakes.StubCertificateLib.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+        <member name="T:CertificateService.Fakes.StubICertificateLib">
+            <summary>Stub type of CertificateService.ICertificateLib</summary>
+        </member>
+        <member name="M:CertificateService.Fakes.StubICertificateLib.#ctor">
+            <summary>Initializes a new instance of type StubICertificateLib</summary>
+        </member>
+        <member name="M:CertificateService.Fakes.StubICertificateLib.CertificateService#ICertificateLib#GetCertificate">
+            <summary>Sets the stub of ICertificateLib.GetCertificate()</summary>
+        </member>
+        <member name="M:CertificateService.Fakes.StubICertificateLib.CertificateService#ICertificateLib#GetData(System.String)">
+            <summary>Sets the stub of ICertificateLib.GetData(String value)</summary>
+        </member>
+        <member name="F:CertificateService.Fakes.StubICertificateLib.GetCertificate">
+            <summary>Sets the stub of ICertificateLib.GetCertificate()</summary>
+        </member>
+        <member name="F:CertificateService.Fakes.StubICertificateLib.GetDataString">
+            <summary>Sets the stub of ICertificateLib.GetData(String value)</summary>
+        </member>
+    </members>
+</doc>

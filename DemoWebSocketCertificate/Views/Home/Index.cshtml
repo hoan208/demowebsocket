@@ -2,6 +2,12 @@
 <div class="jumbotron">
     <h1>ASP.NET</h1>
     <div class="form-group">
+        <label for="connectionUrl">WebSocket Server Url:</label>
+        <input id="connectionUrl" />
+        <button id="connectButton" type="submit">Connect</button>
+        <buttonid id="closeButton" disabled>Close Socket</buttonid>
+    </div>
+    <div class="form-group">
         <label class="label-input" for="source">Chứng thư số: </label>
         <input class="btn btn-primary btn-lg" style=" width: 208px;" type="button" value="Chọn chứng thư số" id="btnCefInfo" />
     </div>
@@ -9,29 +15,53 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 <script type="text/javascript">
-   
+
+    
+
     var WebsocketCir = function () {
         this.init = function () {
             registerEvents();
         }
+        //Lấy Certificate chưng thư số
+        var GetCertificate2 = function () {
+            return Promise.resolve(
+                $.get('http://localhost:5000/GetCertificate2', function (SD) {
+                    //console.log(SD);
+                }).fail(function () {
+
+                })//End ajax
+            );
+        }
 
         var registerEvents = function () {
+
             $('body').on('click', '#btnCefInfo', function (e) {
                 e.preventDefault();
 
-                $.ajax({
-                    type: 'POST',
-                    url: '/Home/GetCer',
-                    dataType: 'json',
-                    success: function (res) {
-                        //
-                    },
-                    error: function (err) {
-                        console.log(err);
-                    }
-                });
+                GetCertificate2().then(res => { });
+
             });
+
+
+            //$('body').on('click', '#btnCefInfo', function (e) {
+            //    e.preventDefault();
+
+            //    $.ajax({
+            //        type: 'POST',
+            //        url: '/Home/GetCer',
+            //        dataType: 'json',
+            //        success: function (res) {
+            //            //
+            //        },
+            //        error: function (err) {
+            //            console.log(err);
+            //        }
+            //    });
+            //});
         }
+        //Ký hóa đơn
+        //
+
     }
     var WsC = new WebsocketCir();
     WsC.init();

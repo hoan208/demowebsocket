@@ -1,9 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.271
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoWebSocketCertificate", "DemoWebSocketCertificate\DemoWebSocketCertificate.csproj", "{8982D923-5272-4252-8BFC-DB06D53B975E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CertificateService", "CertificateService\CertificateService.csproj", "{260AE825-9E26-49C4-A43F-7DCE362F024A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleService", "ConsoleService\ConsoleService.csproj", "{249FE1CF-3845-4A46-A196-2724659CB04D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{8982D923-5272-4252-8BFC-DB06D53B975E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8982D923-5272-4252-8BFC-DB06D53B975E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8982D923-5272-4252-8BFC-DB06D53B975E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{260AE825-9E26-49C4-A43F-7DCE362F024A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{260AE825-9E26-49C4-A43F-7DCE362F024A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{260AE825-9E26-49C4-A43F-7DCE362F024A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{260AE825-9E26-49C4-A43F-7DCE362F024A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{249FE1CF-3845-4A46-A196-2724659CB04D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{249FE1CF-3845-4A46-A196-2724659CB04D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{249FE1CF-3845-4A46-A196-2724659CB04D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{249FE1CF-3845-4A46-A196-2724659CB04D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
