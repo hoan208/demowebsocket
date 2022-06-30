@@ -25,7 +25,7 @@
         //Lấy Certificate chưng thư số
         var GetCertificate2 = function () {
             return Promise.resolve(
-                $.get('http://localhost:5000/GetCertificate2', function (SD) {
+                $.get('ws://127.0.0.1:7890', function (SD) {
                     //console.log(SD);
                 }).fail(function () {
 

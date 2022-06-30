@@ -18,4 +18,8 @@ D:\demowebsocket\ConsoleService\bin\Debug\ConsoleService.exe
 D:\demowebsocket\ConsoleService\bin\Debug\ConsoleService.pdb
 D:\demowebsocket\ConsoleService\bin\Debug\CertificateService.dll
 D:\demowebsocket\ConsoleService\bin\Debug\CertificateService.pdb
-D:\demowebsocket\ConsoleService\obj\Debug\ConsoleService.csprojResolveAssemblyReference.cache
+D:\demowebsocket\ConsoleService\bin\Debug\websocket-sharp.dll
+D:\demowebsocket\ConsoleService\bin\Debug\CertificateService.dll.config
+D:\demowebsocket\ConsoleService\obj\Debug\ConsoleService.csprojAssemblyReference.cache
+D:\demowebsocket\ConsoleService\obj\Debug\ConsoleService.csproj.CoreCompileInputs.cache
+D:\demowebsocket\ConsoleService\obj\Debug\ConsoleService.csproj.CopyComplete

@@ -8,7 +8,8 @@ using System.ServiceModel.Channels;
 using System.ServiceModel.Configuration;
 using System.ServiceModel.Description;
 using System.ServiceModel.Dispatcher;
-using System.Text;
+using WebSocketSharp;
+using WebSocketSharp.Server;
 
 namespace ConsoleService
 {
@@ -16,25 +17,48 @@ namespace ConsoleService
     {
         static void Main(string[] args)
         {
-            try
+            using (WebSocket ws = new WebSocket("ws://127.0.0.1:7890/Echo"))
             {
-                ServiceHost host = new ServiceHost(typeof(CertificateLib), new Uri("http://localhost:5000"));
-                // foreach (ServiceEndpoint EP in host.Description.Endpoints) EP.Behaviors.Add(new BehaviorAttribute()); /* nếu bị lỗi CORS block thì mở commnet này */
-                host.Open();
-                //tạo folder lưu file xml bảng tổng hợp
-                string root = @"C:\InvoiceDataXML";
-                if (!Directory.Exists(root))
-                    Directory.CreateDirectory(root);
-            }
-            catch (Exception)
-            {
-                ServiceHost host = new ServiceHost(typeof(CertificateLib), new Uri("http://localhost:5001"));
-                // foreach (ServiceEndpoint EP in host.Description.Endpoints) EP.Behaviors.Add(new BehaviorAttribute()); /* nếu bị lỗi CORS block thì mở commnet này */
-                host.Open();
-            }
+                ws.OnMessage += Ws_OnMessage;
 
-            Console.WriteLine("Service SignalDigital Open ...");
-            Console.ReadLine();
+                ws.Connect();
+                ws.Send("Hello from PCamp!");
+                Console.ReadKey();
+            }    
+
+
+
+            //WebSocketServer wssv = new WebSocketServer("ws://127.0.0.1:7890");
+            //wssv.Start();
+            //Console.WriteLine("Ws server start on ws://127.0.0.1:7890");
+            //Console.ReadKey();
+            //wssv.Stop();
+
+
+
+            //try
+            //{
+            //    ServiceHost host = new ServiceHost(typeof(CertificateLib), new Uri("http://localhost:5000"));
+            //    // foreach (ServiceEndpoint EP in host.Description.Endpoints) EP.Behaviors.Add(new BehaviorAttribute()); /* nếu bị lỗi CORS block thì mở commnet này */
+            //    host.Open();
+            //    //tạo folder lưu file xml bảng tổng hợp
+            //    string root = @"C:\InvoiceDataXML";
+            //    if (!Directory.Exists(root))
+            //        Directory.CreateDirectory(root);
+            //}
+            //catch (Exception)
+            //{
+            //    ServiceHost host = new ServiceHost(typeof(CertificateLib), new Uri("http://localhost:5001"));
+            //    // foreach (ServiceEndpoint EP in host.Description.Endpoints) EP.Behaviors.Add(new BehaviorAttribute()); /* nếu bị lỗi CORS block thì mở commnet này */
+            //    host.Open();
+            //}
+
+            //Console.WriteLine("Service SignalDigital Open ...");
+            //Console.ReadLine();
+        }
+        private static void Ws_OnMessage(object sender, MessageEventArgs e)
+        {
+            Console.WriteLine("Received from the server: " + e.Data);
         }
     }
 
