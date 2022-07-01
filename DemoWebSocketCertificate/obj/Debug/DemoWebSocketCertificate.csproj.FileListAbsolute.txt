@@ -166,4 +166,6 @@ D:\demowebsocket\DemoWebSocketCertificate\bin\Microsoft.AspNet.TelemetryCorrelat
 D:\demowebsocket\DemoWebSocketCertificate\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 D:\demowebsocket\DemoWebSocketCertificate\obj\Debug\DemoWebSocketCertificate.dll
 D:\demowebsocket\DemoWebSocketCertificate\obj\Debug\DemoWebSocketCertificate.pdb
-D:\demowebsocket\DemoWebSocketCertificate\obj\Debug\DemoWebSocketCertificate.csprojResolveAssemblyReference.cache
+D:\demowebsocket\DemoWebSocketCertificate\obj\Debug\DemoWebSocketCertificate.csprojAssemblyReference.cache
+D:\demowebsocket\DemoWebSocketCertificate\obj\Debug\DemoWebSocketCertificate.csproj.CoreCompileInputs.cache
+D:\demowebsocket\DemoWebSocketCertificate\obj\Debug\DemoWebSocketCertificate.csproj.CopyComplete

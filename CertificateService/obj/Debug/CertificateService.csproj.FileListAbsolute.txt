@@ -7,6 +7,7 @@ D:\TFS\EzInvoice\EzInvoice\Solution\FPTS-Invoice\Project\HDDT\CertificateService
 D:\demowebsocket\CertificateService\bin\Debug\CertificateService.dll.config
 D:\demowebsocket\CertificateService\bin\Debug\CertificateService.dll
 D:\demowebsocket\CertificateService\bin\Debug\CertificateService.pdb
-D:\demowebsocket\CertificateService\obj\Debug\CertificateService.csprojResolveAssemblyReference.cache
 D:\demowebsocket\CertificateService\obj\Debug\CertificateService.dll
 D:\demowebsocket\CertificateService\obj\Debug\CertificateService.pdb
+D:\demowebsocket\CertificateService\obj\Debug\CertificateService.csprojAssemblyReference.cache
+D:\demowebsocket\CertificateService\obj\Debug\CertificateService.csproj.CoreCompileInputs.cache

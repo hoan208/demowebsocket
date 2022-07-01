@@ -13,18 +13,20 @@ using WebSocketSharp.Server;
 
 namespace ConsoleService
 {
+
     class Program
     {
         static void Main(string[] args)
         {
-            using (WebSocket ws = new WebSocket("ws://127.0.0.1:7890/Echo"))
-            {
-                ws.OnMessage += Ws_OnMessage;
 
-                ws.Connect();
-                ws.Send("Hello from PCamp!");
-                Console.ReadKey();
-            }    
+            //using (WebSocket ws = new WebSocket("ws://127.0.0.1:7890/Echo"))
+            //{
+            //    ws.OnMessage += Ws_OnMessage;
+
+            //    ws.Connect();
+            //    ws.Send("Hello from PCamp!");
+            //    Console.ReadKey();
+            //}    
 
 
 
@@ -58,7 +60,7 @@ namespace ConsoleService
         }
         private static void Ws_OnMessage(object sender, MessageEventArgs e)
         {
-            Console.WriteLine("Received from the server: " + e.Data);
+            Console.WriteLine("Client gui tin nhan den server nek: " + e.Data);
         }
     }
 

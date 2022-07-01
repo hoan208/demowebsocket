@@ -7,3 +7,5 @@ D:\demowebsocket\Ws.Server\obj\Debug\Ws.Server.csproj.CoreCompileInputs.cache
 D:\demowebsocket\Ws.Server\obj\Debug\Ws.Server.csproj.CopyComplete
 D:\demowebsocket\Ws.Server\obj\Debug\Ws.Server.exe
 D:\demowebsocket\Ws.Server\obj\Debug\Ws.Server.pdb
+D:\demowebsocket\Ws.Server\bin\Debug\Newtonsoft.Json.dll
+D:\demowebsocket\Ws.Server\bin\Debug\Newtonsoft.Json.xml
