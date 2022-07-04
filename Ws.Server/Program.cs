@@ -10,17 +10,17 @@ using WebSocketSharp.Server;
 
 namespace Ws.Server
 {
-    public class Data
-    {
-        public int id { set; get; }
-        public string name { set; get; }
-    }
+    //public class Data
+    //{
+    //    public int id { set; get; }
+    //    public string name { set; get; }
+    //}
     public class Echo : WebSocketBehavior
     {
         protected override void OnMessage(MessageEventArgs e)
         {
-            //Console.WriteLine("Received message from client: " + e.Data);
-            //var data = JsonConvert.DeserializeObject<List<Data>>(e.Data);
+            ////Console.WriteLine("Received message from client: " + e.Data);
+            ////var data = JsonConvert.DeserializeObject<List<Data>>(e.Data);
 
             X509Certificate2Collection keyStore = new X509Certificate2Collection();
             X509Store store = new X509Store(StoreName.My, StoreLocation.CurrentUser);
@@ -35,7 +35,7 @@ namespace Ws.Server
                     X509SelectionFlag.SingleSelection)[0];
             string Subject = cert.SubjectName.Name.ToLower();
             Console.WriteLine("Received message from client: " + Subject);
-            //Send(Subject);
+            Send(Subject);
         }
     }
 
@@ -43,10 +43,11 @@ namespace Ws.Server
     {
         static void Main(string[] args)
         {
+            //tạo server Ws
             WebSocketServer wssv = new WebSocketServer("ws://127.0.0.1:7890");
             wssv.AddWebSocketService<Echo>("/Echo");
             wssv.Start();
-            Console.WriteLine("Đã start server ws://127.0.0.1:7890");
+            Console.WriteLine("Đã start server ws://127.0.0.1:7890/Echo");
 
             Console.ReadKey();
             wssv.Stop();

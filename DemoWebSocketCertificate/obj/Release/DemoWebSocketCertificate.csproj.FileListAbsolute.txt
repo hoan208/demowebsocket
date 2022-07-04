@@ -170,3 +170,4 @@ D:\demowebsocket\DemoWebSocketCertificate\obj\Release\DemoWebSocketCertificate.c
 D:\demowebsocket\DemoWebSocketCertificate\obj\Release\DemoWebSocketCertificate.csproj.CopyComplete
 D:\demowebsocket\DemoWebSocketCertificate\obj\Release\DemoWebSocketCertificate.dll
 D:\demowebsocket\DemoWebSocketCertificate\obj\Release\DemoWebSocketCertificate.pdb
+D:\demowebsocket\DemoWebSocketCertificate\bin\websocket-sharp.dll

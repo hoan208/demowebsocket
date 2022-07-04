@@ -2,10 +2,8 @@ D:\demowebsocket\Ws.Server\bin\Debug\Ws.Server.exe.config
 D:\demowebsocket\Ws.Server\bin\Debug\Ws.Server.exe
 D:\demowebsocket\Ws.Server\bin\Debug\Ws.Server.pdb
 D:\demowebsocket\Ws.Server\bin\Debug\websocket-sharp.dll
-D:\demowebsocket\Ws.Server\obj\Debug\Ws.Server.csprojAssemblyReference.cache
-D:\demowebsocket\Ws.Server\obj\Debug\Ws.Server.csproj.CoreCompileInputs.cache
-D:\demowebsocket\Ws.Server\obj\Debug\Ws.Server.csproj.CopyComplete
 D:\demowebsocket\Ws.Server\obj\Debug\Ws.Server.exe
 D:\demowebsocket\Ws.Server\obj\Debug\Ws.Server.pdb
 D:\demowebsocket\Ws.Server\bin\Debug\Newtonsoft.Json.dll
 D:\demowebsocket\Ws.Server\bin\Debug\Newtonsoft.Json.xml
+D:\demowebsocket\Ws.Server\obj\Debug\Ws.Server.csprojResolveAssemblyReference.cache

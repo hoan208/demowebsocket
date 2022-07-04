@@ -79,10 +79,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>09/10/2013 16:29:20</publishTime>
     </File>
     <File Include="bin/DemoWebSocketCertificate.dll">
-      <publishTime>06/28/2022 15:29:56</publishTime>
+      <publishTime>07/01/2022 15:32:19</publishTime>
     </File>
     <File Include="bin/DemoWebSocketCertificate.pdb">
-      <publishTime>06/28/2022 15:29:56</publishTime>
+      <publishTime>07/01/2022 15:32:19</publishTime>
     </File>
     <File Include="bin/Microsoft.AspNet.TelemetryCorrelation.dll">
       <publishTime>06/28/2017 15:05:26</publishTime>
@@ -270,6 +270,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="bin/WebGrease.dll">
       <publishTime>01/23/2014 13:57:34</publishTime>
     </File>
+    <File Include="bin/websocket-sharp.dll">
+      <publishTime>02/12/2017 18:07:26</publishTime>
+    </File>
     <File Include="Content/bootstrap-theme.css">
       <publishTime>06/24/2022 14:02:44</publishTime>
     </File>
@@ -346,7 +349,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>06/24/2022 14:03:00</publishTime>
     </File>
     <File Include="Views/Home/Index.cshtml">
-      <publishTime>06/27/2022 16:30:46</publishTime>
+      <publishTime>07/01/2022 15:31:14</publishTime>
     </File>
     <File Include="Views/Shared/Error.cshtml">
       <publishTime>06/24/2022 14:02:04</publishTime>
@@ -361,7 +364,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>06/24/2022 14:02:04</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>06/28/2022 15:29:57</publishTime>
+      <publishTime>07/01/2022 15:32:13</publishTime>
     </File>
   </ItemGroup>
 </Project>

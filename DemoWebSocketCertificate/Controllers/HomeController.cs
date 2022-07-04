@@ -15,6 +15,7 @@ using System.Text;
 using System.IO;
 using System.Xml.Linq;
 using System.Net.WebSockets;
+using WebSocketSharp.Server;
 
 namespace DemoWebSocketCertificate.Controllers
 {
@@ -30,7 +31,7 @@ namespace DemoWebSocketCertificate.Controllers
         [HttpPost]
         public JsonResult GetCer()
         {
-            
+
             //var ws = new WebSocket("wss://127.0.0.1:80/");
             //string _certificatePath = "\\cert\\public_privatekey.pfx";
             //X509Certificate2 x509 = new X509Certificate2(_certificatePath, "mypass");

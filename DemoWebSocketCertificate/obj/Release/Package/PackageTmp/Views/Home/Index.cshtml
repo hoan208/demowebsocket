@@ -2,6 +2,12 @@
 <div class="jumbotron">
     <h1>ASP.NET</h1>
     <div class="form-group">
+        <label for="connectionUrl">WebSocket Server Url:</label>
+        <input id="connectionUrl" value="ws://127.0.0.1:7890"/>
+        <button id="connectButton" type="submit">Connect</button>
+        <buttonid id="closeButton" disabled>Close Socket</buttonid>
+    </div>
+    <div class="form-group">
         <label class="label-input" for="source">Chứng thư số: </label>
         <input class="btn btn-primary btn-lg" style=" width: 208px;" type="button" value="Chọn chứng thư số" id="btnCefInfo" />
     </div>
@@ -9,17 +15,54 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 <script type="text/javascript">
-   
+
+    
     var WebsocketCir = function () {
         this.init = function () {
+            $('body').on('click', '#connectButton', function (e) {
+                e.preventDefault();
+
+                Ws().then(res => { });
+
+            });
             registerEvents();
         }
 
-        var registerEvents = function () {
-            $('body').on('click', '#btnCefInfo', function (e) {
-                e.preventDefault();
+        
+        //khởi tạo server websocket
+        var Ws = function () {
 
-                $.ajax({
+            let socket = new WebSocket("ws://127.0.0.1:7890/Echo");
+
+            socket.onopen = function (e) {
+                alert("[open] Connection established");
+                alert("Sending to server");
+                const data = [{ id: 1, name: 'HN' }, { id: 2, name: 'DN' }, { id: 3, name: 'HP' }];
+                let dataToJson = JSON.stringify(data);
+                alert("Data to send:" + dataToJson);
+                socket.send(dataToJson);
+            };
+
+            socket.onmessage = function (event) {
+                alert(`[message] Data received from server: ${event.data}`);
+            };
+            $.ajax({
+                type: 'POST',
+                url: '/Home/Ws',
+                dataType: 'json',
+                success: function (res) {
+                    //
+                },
+                error: function (err) {
+                    console.log(err);
+                }
+            });
+
+        }
+        //Lấy Certificate chưng thư số
+        var GetCertificate2 = function () {
+
+            $.ajax({
                     type: 'POST',
                     url: '/Home/GetCer',
                     dataType: 'json',
@@ -30,8 +73,59 @@
                         console.log(err);
                     }
                 });
-            });
+
+            //socket.onclose = function (event) {
+            //    if (event.wasClean) {
+            //        alert(`[close] Connection closed cleanly, code=${event.code} reason=${event.reason}`);
+            //    } else {
+            //        // e.g. server process killed or network down
+            //        // event.code is usually 1006 in this case
+            //        alert('[close] Connection died');
+            //    }
+            //};
+
+            //socket.onerror = function (error) {
+            //    alert(`[error] ${error.message}`);
+            //};
+
+            //return Promise.resolve(
+            //    $.get('ws://127.0.0.1:7890', function (SD) {
+            //        //console.log(SD);
+            //    }).fail(function () {
+
+            //    })//End ajax
+            //);
         }
+
+        var registerEvents = function () {
+
+            $('body').on('click', '#btnCefInfo', function (e) {
+                e.preventDefault();
+
+                GetCertificate2().then(res => { });
+
+            });
+
+
+            //$('body').on('click', '#btnCefInfo', function (e) {
+            //    e.preventDefault();
+
+            //    $.ajax({
+            //        type: 'POST',
+            //        url: '/Home/GetCer',
+            //        dataType: 'json',
+            //        success: function (res) {
+            //            //
+            //        },
+            //        error: function (err) {
+            //            console.log(err);
+            //        }
+            //    });
+            //});
+        }
+        //Ký hóa đơn
+        //
+
     }
     var WsC = new WebsocketCir();
     WsC.init();
